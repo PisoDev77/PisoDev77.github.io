@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -130,7 +130,7 @@
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -159,6 +159,177 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://pisodev77.github.io/2022/11/07/github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Piso">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Piso Dev Log">
+      <meta itemprop="description" content="This is blog for development log">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Piso Dev Log">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/07/github/" class="post-title-link" itemprop="url">How & Why use github?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-11-07 11:16:03 / Modified: 11:16:50" itemprop="dateCreated datePublished" datetime="2022-11-07T11:16:03+09:00">2022-11-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="협업할-수-있는-능력을-가지자-x2F-부제-Github을-쓸줄-알아야지"><a href="#협업할-수-있는-능력을-가지자-x2F-부제-Github을-쓸줄-알아야지" class="headerlink" title="협업할 수 있는 능력을 가지자 &#x2F; 부제: Github을 쓸줄 알아야지"></a>협업할 수 있는 능력을 가지자 &#x2F; 부제: Github을 쓸줄 알아야지</h1><h2 id="Github이-무엇인가"><a href="#Github이-무엇인가" class="headerlink" title="Github이 무엇인가"></a>Github이 무엇인가</h2><p>서비스이다. GIT을 활용한 버전관리를 온라인상에서 저장할 수 있도록 해주는 서비스입니다. 서비스를 강조한 이유는 Github과 Git은 엄연히 다르다는 것을 기억해두기 위함입니다.</p>
+<h2 id="내가-그동안-사용한-Github"><a href="#내가-그동안-사용한-Github" class="headerlink" title="내가 그동안 사용한 Github"></a>내가 그동안 사용한 Github</h2><ol>
+<li><p><code>git add .</code> &amp;&amp; <code>git commit -m &quot;Blah Blah&quot;</code> &amp;&amp; <code>git push</code></p>
+<blockquote>
+<p>와 github repository에 성공적으로 올라갔다. Github 써보았다.</p>
+</blockquote>
+</li>
+<li><p><code>git add</code>를 선택적으로 그리고 <code>git commit -m</code> 보다 <code>git commit</code>을 통한 커밋 저장이 왜 중요한가?</p>
+</li>
+</ol>
+<ul>
+<li>git은 버전관리 또는 형상관리를 위한 도구입니다. 하나의 서비스를 만드는 회사나, 팀이 Github으로 버전을 관리한다는 것은 나 이외에 다른 사람과 커밋을 공유한다는 뜻입니다. 그래서 정해진 커밋 컨벤션에 맞게 커밋을 작성하고 그 커밋은 동작하는 하나의 묶을으로 <code>add</code>하여 의미있는 파일들을 Repository에 push해야 합니다.</li>
+<li>아직 개발자로 경험해본적도 없는 제가 어떻게 이를 느꼈을까요? <a target="_blank" rel="noopener" href="https://www.conventionalcommits.org/ko/v1.0.0/">Conventional Commits</a> 많은 개발자들은 표준화된 것을 좋아합니다. 그래서 널리 알려진 컨벤션들을 활용하는 회사도 많습니다. 오픈소스를 읽어도 <code>git clone</code> 뿐이였습니다. 하지만 컨벤션을 지킨 이슈와 풀리퀘스트 등을 관찰할 수 있게 되었습니다.</li>
+<li>대표적 예로 <a target="_blank" rel="noopener" href="https://github.com/toss/slash">toss&#x2F;slash</a> 작성일(11-08) 기준으로 토스에서 오픈소스를 두어달 전에 오픈했습니다. 오픈소스에 이슈들과 풀리퀘스트를 읽고 이것이 BUG이고 FEAT 이런 컨벤션이 지켜져 올라가는 것을 보고 저 또한 일면식 없는 사람들의 메세지를 이해하고 읽을 수 있었습니다.<blockquote>
+<p>toss&#x2F;slash는 타입스크립트로 이루어진 패키지 모음입니다. 읽을 수 있지만 컨트리뷰트를 아직 못하는 것이 정말 아쉽습니다. 아직 ES6+와 Webpack에 집중하고 있습니다. 그래서 타입스크립트을 잘 알지못합니다.</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://pisodev77.github.io/2022/11/07/howtowritecode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Piso">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Piso Dev Log">
+      <meta itemprop="description" content="This is blog for development log">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Piso Dev Log">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/07/howtowritecode/" class="post-title-link" itemprop="url">How to write code?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-11-07 11:14:39 / Modified: 11:16:43" itemprop="dateCreated datePublished" datetime="2022-11-07T11:14:39+09:00">2022-11-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="가독성이-좋은-코드"><a href="#가독성이-좋은-코드" class="headerlink" title="가독성이 좋은 코드"></a>가독성이 좋은 코드</h1><h2 id="Deep-Dive를-통해서"><a href="#Deep-Dive를-통해서" class="headerlink" title="Deep Dive를 통해서"></a>Deep Dive를 통해서</h2><blockquote>
+<p>“결국에 이 책은 모두 가독성에 대한 내용이에요.” - 이웅모 (Deep Dive 저자)</p>
+</blockquote>
+<ul>
+<li>용어<br>추상적 단어나 독자적인 이해로 만든 용어는 같이 일하는 사이에서 모호함을 줄 수 있습니다. 약속된 혹은 정확한 용어로 표현함으로써, 보다 소통이 원할하게 이뤄질 수 있습니다. 예를 들어서, <code>생성자 함수</code>와 <code>일반 함수</code>라는 표현을 독자적 추상적 단어로 동료에게 표현한다면 이 용어에 대한 추가설명등이 필요해집니다. 불필요한 일이 발생하는 것입니다.</li>
+<li>네이밍<br>Deep Dive를 읽으면 식별자의 네이밍 규칙등이 나오는데, 그런 규칙들과 동시에 함수나 변수의 역할을 명시적으로 직관적으로 알 수 있도록 하는 네이밍을 의미합니다. 나를 위해서 그리고 나와 일할 동료를 위해 시간이 지나도 처음 읽어도 이름만으로도 이해할 수 있다면 좋은 네이밍입니다. 예를 들어, <code>$</code>를 변수명에 앞에 위치시켜 Node 객체를 할당받은 변수를 나타낸다거나, <code>const todos = []</code> 객체 리터럴로 작성해서 <code>null</code>이나 <code>undefined</code>로 할당했을 때보다 명시적으로 <code>todos</code>라는 변수에는 배열이 온다는 것을 나타낼 수도 있습니다.</li>
+<li>사람이 이해할수 있도록<br><code>for(let i = 0 ; i &lt; 10 ; i++)</code>은 자료구조와 알고리즘 혹은 코딩테스트를 준비한 사람이라면 모두 쉽게 읽을 수 있는 코드입니다. ‘i를 1씩 증가시켜 10번의 같은 문을 반복해줘’의 의미를 가진 문입니다. 하지만 그냥 읽었을 때는 문법을 모르는 사람이라면 이해하기 어렵습니다. <code>for(let i = 0 ; i &lt; 10 ; i += 1)</code> 세번째 조건인 증감을 <code>+=</code> 할당연산자로 조금 더 사람이 읽을 수 있도록 작성해봤습니다. 하지만 여전히 사람이 이해하기에는 쉬운 코드는 아닙니다. 그래서 영단어 조합으로 조금 더 이해도를 높일 수 있도록 해보겠습니다. <code>function addOneTenTimes()</code> ‘1을 열번 더해줘’라는 의미에 이름으로 함수를 작성했습니다. 조금 더 이해도가 올라갔지만, 의미는 퇴색되보입니다. 이름을 문을 열번 반복한다는 의미에 맞게 조금 변경시켜보겠습니다. <code>function repeatTenTimes()</code> ‘열 번 반복해줘’라는 의미가 전달되도록 이름을 지었습니다.</li>
+<li>명령형 VS 선언형<br>프론트엔드 개발자가 되고 싶다면, 성능을 무시할 수 없습니다. 그래도 Deep Dive와 마틴 파울러의 리팩토링에서는 성능에 문제가 된다면 이후에 살펴봐도 된다고 서술합니다. 성능에 영향을 끼칠 정도로 무거운 코드가 있다면, 그 자체가 문제일 수 있으며 작성된 코드는 모수가 충분히 적다면 브라우저 벤더들이 제작한 브라우저 환경에서 무리가 있을 확률은 적기 때문입니다. 고로 앞서 업근된 for문처럼 기계에게 작동할 문들을 하나씩 알려주는 방식보다는 선언적으로 사람이 이해할 수 있도록 네이밍과 구조를 작성하고, 기계는 그 네이밍이나 구조안에 동작을 이해하여 실행할 수 있도록 작성하는 것을 우선으로 생각합니다.</li>
+</ul>
+<blockquote>
+<p>“자바스크립트는 자바스크립트답게 작성하세요.”<br>이웅모님과 함께 자바스크립트를 배우고 공부를 할때 제일 집중했으며 이해가 어려웠던 말이었습니다.</p>
+</blockquote>
+<ul>
+<li>자바스크립트다움?<br>첫 힌트를 얻은 것은 19장 프로토타입의 서두에 나오는 <code>멀티 패러다임 프로그래밍 언어다</code> 입니다. 자바스크립트는 프로토타입으로 객체지향 프로그래밍을 구현할 수 있습니다. 앞선 가독성 관점으로 생각해서 자바스크립트를 여러 패러다임의 장점을 이용해서 가독성 좋게 명시적으로 코드를 작설할 수 있다고 생각합니다.(아직 확실히 이해했다거나 개인적 생각정리가 완료되지는 않았습니다.)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
