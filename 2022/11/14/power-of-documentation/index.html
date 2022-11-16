@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"pisodev77.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="공식문서를 읽을 수 있는 힘 제로베이스 김데레사님의 HTML &#x2F; CSS 수업 때 공식문서의 힘을 엿볼수 있었습니다.  나는 공식문서를 읽을 수 있는가? [ ● ] 공식문서가 있는 페이지를 방문할 수 있다. [ ● ] 영어로 된 공식문서를 해석할 수 있다. [ ● ] 공식문서를 읽고 이해할 수 있다. [ ▲ ] 내 코드에 적용할 수 있다. [ x ]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The power of Looking into documentation.">
+<meta property="og:url" content="http://pisodev77.github.io/2022/11/14/power-of-documentation/index.html">
+<meta property="og:site_name" content="Piso Dev Log">
+<meta property="og:description" content="공식문서를 읽을 수 있는 힘 제로베이스 김데레사님의 HTML &#x2F; CSS 수업 때 공식문서의 힘을 엿볼수 있었습니다.  나는 공식문서를 읽을 수 있는가? [ ● ] 공식문서가 있는 페이지를 방문할 수 있다. [ ● ] 영어로 된 공식문서를 해석할 수 있다. [ ● ] 공식문서를 읽고 이해할 수 있다. [ ▲ ] 내 코드에 적용할 수 있다. [ x ]">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-14T11:14:39.000Z">
+<meta property="article:modified_time" content="2022-11-16T02:32:45.739Z">
+<meta property="article:author" content="Piso">
+<meta property="article:tag" content="HTML&#x2F;CSS">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="documentation">
+<meta property="article:tag" content="docs">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://pisodev77.github.io/2022/11/14/power-of-documentation/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://pisodev77.github.io/2022/11/14/power-of-documentation/","path":"2022/11/14/power-of-documentation/","title":"The power of Looking into documentation."}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>The power of Looking into documentation. | Piso Dev Log</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Piso Dev Log</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wannbe F.E Developer</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%ED%9E%98"><span class="nav-number">1.</span> <span class="nav-text">공식문서를 읽을 수 있는 힘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%82%98%EB%8A%94-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94%EA%B0%80"><span class="nav-number">1.1.</span> <span class="nav-text">나는 공식문서를 읽을 수 있는가?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EA%B0%80-%EC%9E%88%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A5%BC-%EB%B0%A9%EB%AC%B8%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4"><span class="nav-number">1.1.1.</span> <span class="nav-text">공식문서가 있는 페이지를 방문할 수 있다.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%98%81%EC%96%B4%EB%A1%9C-%EB%90%9C-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%A5%BC-%ED%95%B4%EC%84%9D%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4"><span class="nav-number">1.1.2.</span> <span class="nav-text">영어로 된 공식문서를 해석할 수 있다.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%A5%BC-%EC%9D%BD%EA%B3%A0-%EC%9D%B4%ED%95%B4%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4"><span class="nav-number">1.1.3.</span> <span class="nav-text">공식문서를 읽고 이해할 수 있다.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%82%B4-%EC%BD%94%EB%93%9C%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4"><span class="nav-number">1.1.4.</span> <span class="nav-text">내 코드에 적용할 수 있다.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C-%EC%86%8C%EA%B0%9C%EC%9D%98-%EB%AA%A9%EC%A0%81%EC%9D%B4%EB%82%98-%EB%AA%A9%ED%91%9C%EC%97%90-%EB%A7%9E%EA%B2%8C-%EC%A0%81%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4"><span class="nav-number">1.1.5.</span> <span class="nav-text">공식문서 소개의 목적이나 목표에 맞게 적용할 수 있다.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EC%9D%98-%ED%9E%98%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%EC%96%BB%EC%9D%84-%EC%88%98-%EC%9E%88%EB%82%98"><span class="nav-number">1.2.</span> <span class="nav-text">공식문서의 힘을 통해 무엇을 얻을 수 있나?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%82%98%EC%9D%98-%EC%9D%98%EA%B2%AC%EC%97%90-%EC%A0%84%EB%AC%B8%EC%84%B1-%EB%98%90%EB%8A%94-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%9D%BC%EB%8A%94-%EA%B7%BC%EA%B1%B0%EB%A1%9C-%EB%86%92%EC%9D%BC-%EC%88%98-%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4"><span class="nav-number">1.2.1.</span> <span class="nav-text">나의 의견에 전문성 또는 정확성을 공식문서라는 근거로 높일 수 있습니다.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%82%B4%EA%B0%80-%EC%9E%91%EC%84%B1%ED%95%9C-%EB%AC%B8%EC%84%9C%EB%A5%BC-%EB%8B%A4%EB%A5%B8-%EC%82%AC%EB%9E%8C%EC%9D%B4-%EC%B0%B8%EC%A1%B0%ED%95%98%EA%B8%B0-%EC%A2%8B%EB%8B%A4"><span class="nav-number">1.2.2.</span> <span class="nav-text">내가 작성한 문서를 다른 사람이 참조하기 좋다.</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Piso</p>
+  <div class="site-description" itemprop="description">This is blog for development log</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://pisodev77.github.io/2022/11/14/power-of-documentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Piso">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Piso Dev Log">
+      <meta itemprop="description" content="This is blog for development log">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="The power of Looking into documentation. | Piso Dev Log">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          The power of Looking into documentation.
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-11-14 20:14:39" itemprop="dateCreated datePublished" datetime="2022-11-14T20:14:39+09:00">2022-11-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-11-16 11:32:45" itemprop="dateModified" datetime="2022-11-16T11:32:45+09:00">2022-11-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="공식문서를-읽을-수-있는-힘"><a href="#공식문서를-읽을-수-있는-힘" class="headerlink" title="공식문서를 읽을 수 있는 힘"></a>공식문서를 읽을 수 있는 힘</h1><blockquote>
+<p>제로베이스 김데레사님의 HTML &#x2F; CSS 수업 때 공식문서의 힘을 엿볼수 있었습니다.</p>
+</blockquote>
+<h2 id="나는-공식문서를-읽을-수-있는가"><a href="#나는-공식문서를-읽을-수-있는가" class="headerlink" title="나는 공식문서를 읽을 수 있는가?"></a>나는 공식문서를 읽을 수 있는가?</h2><ul>
+<li>[ ● ] <a href="#%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EA%B0%80-%EC%9E%88%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A5%BC-%EB%B0%A9%EB%AC%B8%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4">공식문서가 있는 페이지를 방문할 수 있다</a>.</li>
+<li>[ ● ] <a href="#%EC%98%81%EC%96%B4%EB%A1%9C-%EB%90%9C-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%A5%BC-%ED%95%B4%EC%84%9D%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4">영어로 된 공식문서를 해석할 수 있다</a>.</li>
+<li>[ ● ] <a href="#%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%A5%BC-%EC%9D%BD%EA%B3%A0-%EC%9D%B4%ED%95%B4%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4">공식문서를 읽고 이해할 수 있다</a>.</li>
+<li>[ ▲ ] <a href="#%EB%82%B4-%EC%BD%94%EB%93%9C%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4">내 코드에 적용할 수 있다</a>.</li>
+<li>[ x ] 공식문서 소개의 목적이나 목표에 맞게 적용할 수 있다.</li>
+</ul>
+<h3 id="공식문서가-있는-페이지를-방문할-수-있다"><a href="#공식문서가-있는-페이지를-방문할-수-있다" class="headerlink" title="공식문서가 있는 페이지를 방문할 수 있다."></a>공식문서가 있는 페이지를 방문할 수 있다.</h3><p>저는 공식문서가 있는지 검색할 수 있습니다. 예를 들어 HTML 태그에 대한 공식문서가 필요하다면, <a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/"><code>Whatwg 표준문서</code></a>를 참조합니다. 또는 <a target="_blank" rel="noopener" href="https://www.w3.org/standards/webdesign/htmlcss">w3 공식 사이트</a>를 방문합니다. 2가지 중 <a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/"><code>Whatwg 표준문서</code></a>를 우선적으로 검색합니다. 그 이유는 w3의 표준화 속도가 느려 유명 브라우저 벤더들이 다른 문서를 작성하니, 이 단체가 <code>whatwg</code>입니다.</p>
+<h3 id="영어로-된-공식문서를-해석할-수-있다"><a href="#영어로-된-공식문서를-해석할-수-있다" class="headerlink" title="영어로 된 공식문서를 해석할 수 있다."></a>영어로 된 공식문서를 해석할 수 있다.</h3><p>대부분의 라이브러리나 프레임워크는 북미나, 유럽권에서 배포됩니다. 최신의 정보는 영어로 된 문서가 많습니다. 한글 업데이트가 매순간 이뤄진다면 좋겠지만 쉬운 일이 아닙니다. 그래서 우리는 영어로 문서를 읽고 해당 기술을 이해할 능력이 요구됩니다.</p>
+<h3 id="공식문서를-읽고-이해할-수-있다"><a href="#공식문서를-읽고-이해할-수-있다" class="headerlink" title="공식문서를 읽고 이해할 수 있다."></a>공식문서를 읽고 이해할 수 있다.</h3><p>설명이 불친절한 문서는 어려울 수 있지만, 커뮤니티가 크거나 짜임새가 있는 문서라면 이해도도 높아집니다. 모든 글을 읽지 않아도 흐름으로 내가 찾고자 하는 부분을 알 수 있습니다. 즉 내가 이해되지않은 부분은 자세히 읽고, 알 수 있는 부분은 융통성을 발휘할 수 있습니다. 이는 시간의 절약과, 생산성 향상에 도움을 줍니다. 예를 들어 webpack 처럼 내가 깊거나 자세히 사용법이 알고 싶은 빌드 툴 또는 라이브러리등이 있다면, Guides와 Documentation을 모두 참조하며 읽어보고 이해하겠지만, Hexo처럼 그때 그때 필요한 기능을 검색해 사용할 도구들이 있습니다. 때와 상황에 따라 문서를 읽는 방법을 터득했습니다.</p>
+<h3 id="내-코드에-적용할-수-있다"><a href="#내-코드에-적용할-수-있다" class="headerlink" title="내 코드에 적용할 수 있다."></a>내 코드에 적용할 수 있다.</h3><p>도구의 목적과 동작 순서등을 이해한다면 충분히 코드에 적용할 수 있습니다. 예를 들어 todos application을 통해 Javascript를 이해하는 도중에 webpack을 적용한다거나, 스타일시트에 변화를 줘야할 때 적절한 스크립트나, 파일구조, 순서등을 유려하게 수정할 수 있습니다.</p>
+<h3 id="공식문서-소개의-목적이나-목표에-맞게-적용할-수-있다"><a href="#공식문서-소개의-목적이나-목표에-맞게-적용할-수-있다" class="headerlink" title="공식문서 소개의 목적이나 목표에 맞게 적용할 수 있다."></a>공식문서 소개의 목적이나 목표에 맞게 적용할 수 있다.</h3><p>앞서 말했던 코드의 적용이 완전하지 않습니다. 도구들의 목적이나 목표룰 파악하는 연습이 충분하지 않아 미흡합니다. 미흡한 점을 발견했으니, 보충할 방법이 있습니다. 디자인, 아키텍처, 시스템 등 전박적 소프트웨어 기술에 대한 이해도를 높이면, 더욱 더 제가 읽은 공식문서의 힘은 강해집니다.</p>
+<h2 id="공식문서의-힘을-통해-무엇을-얻을-수-있나"><a href="#공식문서의-힘을-통해-무엇을-얻을-수-있나" class="headerlink" title="공식문서의 힘을 통해 무엇을 얻을 수 있나?"></a>공식문서의 힘을 통해 무엇을 얻을 수 있나?</h2><ul>
+<li><a href="#%EB%82%98%EC%9D%98-%EC%9D%98%EA%B2%AC%EC%97%90-%EC%A0%84%EB%AC%B8%EC%84%B1-%EB%98%90%EB%8A%94-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C%EB%9D%BC%EB%8A%94-%EA%B7%BC%EA%B1%B0%EB%A1%9C-%EB%86%92%EC%9D%BC-%EC%88%98-%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4">설득력</a></li>
+<li><a href="">범용성</a></li>
+</ul>
+<h3 id="나의-의견에-전문성-또는-정확성을-공식문서라는-근거로-높일-수-있습니다"><a href="#나의-의견에-전문성-또는-정확성을-공식문서라는-근거로-높일-수-있습니다" class="headerlink" title="나의 의견에 전문성 또는 정확성을 공식문서라는 근거로 높일 수 있습니다."></a>나의 의견에 전문성 또는 정확성을 공식문서라는 근거로 높일 수 있습니다.</h3><h3 id="내가-작성한-문서를-다른-사람이-참조하기-좋다"><a href="#내가-작성한-문서를-다른-사람이-참조하기-좋다" class="headerlink" title="내가 작성한 문서를 다른 사람이 참조하기 좋다."></a>내가 작성한 문서를 다른 사람이 참조하기 좋다.</h3><p>내가 공식문서의 일반적 구조를 이해하고 알고 있다면, 내가 작성한 문서들을 다른 사람이 읽어도 금방 이해할 수 있도록 작성할 수 있어집니다. 팀 프로젝트를 진행하면서도 내가 공부하고 진행한 환경설정에 대해 문서를 프로젝트 막바지에 표준화된 공식문서를 작성할 수 있다면, 시간을 절약할 수 있습니다.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTML-CSS/" rel="tag"># HTML/CSS</a>
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/documentation/" rel="tag"># documentation</a>
+              <a href="/tags/docs/" rel="tag"># docs</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/10/Useful/snippet/" rel="prev" title="VSCode에서 Snippet을 등록하기">
+                  <i class="fa fa-chevron-left"></i> VSCode에서 Snippet을 등록하기
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Piso</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
