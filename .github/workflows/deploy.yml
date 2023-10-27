@@ -57,7 +57,8 @@ jobs:
 
     deploy:
         name: Deploy
-        needs: [build, jsdocs]
+        # needs: [build, jsdocs]
+        needs: [build]
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/main'
 
