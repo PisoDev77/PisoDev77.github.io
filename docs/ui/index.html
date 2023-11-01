@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="module" src="index.js"></script>
+    </head>
+    <body>
+        <section id="main" class="h-screen">aaa</section>
+        <header class="flex flex-row justify-end bg-green-500 text-amber-300 p-4 sm:p-8 static sticky top-0">
+            <!-- <img alt="Piso portfolio 로고" /> -->
+            <button id="menu-dropdwon-btn" class="visible sm:hidden">Menu</button>
+            <nav
+                class="flex flex-col sm:block sm:flex-row scale-y-0 sm:scale-y-100 text-2xl sm:text-3xl shadow-md sm:shadow-none absolute p-4 top-16 bg-white sm:relative sm:p-0 sm:top-0 sm:bg-green-500 sm:text-amber-300"
+            >
+                <a class="navItem" href="#" data-path="home">Home</a>
+                <a class="navItem" href="#" data-path="about">About</a>
+                <a class="navItem" href="#" data-path="projects">projects</a>
+            </nav>
+        </header>
+        <section class="h-screen" id="home">
+            <h1>Home</h1>
+            <p>Home Content</p>
+        </section>
+        <section class="h-screen" id="about">
+            <h1>About</h1>
+            <p>About Content</p>
+        </section>
+        <section class="h-screen" id="projects">
+            <h1>Projects</h1>
+            <p>Projects Content</p>
+        </section>
+        <footer><button id="scrollToTop">맨 위로</button>blog sns github</footer>
+    </body>
+</html>

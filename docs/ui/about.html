@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="../../src/assets/favicon.svg" />
+        <title>타원 따라 이미지 이동</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+        <script type="module" src="about.js"></script>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #container {
+                position: relative;
+            }
+            .move {
+                position: absolute;
+                left: 0;
+            }
+            #path {
+                width: 80%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <button id="myBtn">Click</button>
+            <div id="container">
+                <svg>
+                    <path id="path" d="M 150 50 a 150 50 0 1 0 0.001 0" fill="none" stroke="black" />
+                </svg>
+                <img class="move" id="book" src="../../src/assets/book.svg" width="50" height="50" alt="" />
+                <img class="move" id="cocktail" src="../../src/assets/cocktail.svg" width="50" height="50" alt="" />
+                <img class="move" id="laptop" src="../../src/assets/laptop.svg" width="50" height="50" alt="" />
+            </div>
+        </main>
+    </body>
+</html>
