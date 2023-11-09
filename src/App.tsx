@@ -1,8 +1,17 @@
+import { useRef } from 'react';
+
+import Header from './components/Containers/Header';
+import useGsap from './hooks/useGsap';
+
 function App() {
+    const headerRef = useRef<HTMLDivElement>(null);
+
+    const { isMenuOpen, setIsMenuOpen } = useGsap({ headerRef });
+
     return (
-        <>
-            <h1>Hello World !!</h1>
-        </>
+        <main>
+            <Header headerRef={headerRef} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}></Header>
+        </main>
     );
 }
 
