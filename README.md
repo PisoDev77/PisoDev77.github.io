@@ -4,31 +4,30 @@
 
 ### Develop
 
-#### phase1
+#### Components
 
--   hooks
--   useGsasp
--   메인화면 애니메이션
--   메뉴선택
--   메뉴 이동후
--   맨 위로
--   커튼 업앤다운
+-   Page
 
--   컴포넌트 -컨테이너
--   페이지ㅡ 카드, 커튼,메뉴
--   카드
--   버튼
+    -   HomePage
+    -   AboutPage
+    -   ProjectsPage
+    -   BlogPage
 
-    -   TopTop
-    -   TOview
-    -   viewReadme
+-   Card
 
--   타이포그래피
+    -   HomeCard
+    -   ProjectCard
 
-    -   h1,h2,h3
-    -   titles page,card
+-   Header
+-   Footer
 
-    -   헤더
+-   Title
+    -   PageTitle
+    -   AriaTitle
+    -   ProjectTitle
 
--   푸터
--   메뉴
+#### Requirements (by Page)
+
+-   HomePage
+    -   [ ] HomePage Content has typing animation.
+    -   [ ] Scroll to About Page When Click View My Site Button.
