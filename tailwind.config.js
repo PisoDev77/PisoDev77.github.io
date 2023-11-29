@@ -6,8 +6,8 @@ export default {
     darkMode: 'class',
     theme: {
         colors: {
-            primary: colors.lime,
-            secondary: colors.amber,
+            primary: '#FEFFDE',
+            secondary: '#52734D',
             netural: colors.sky,
         },
         extend: {},
