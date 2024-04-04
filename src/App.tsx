@@ -1,18 +1,13 @@
-import Footer from './components/Footer';
 import Header from './components/Header';
-import { HomePage, AboutPage, ProjectsPage, BlogPage } from './components/Pages';
+import Heading1 from './components/Headings/Heading1';
 
 function App() {
-    return (
-        <main className="bg-primary text-secondary dark:bg-secondary dark:text-primary">
-            <HomePage />
-            <Header />
-            <AboutPage />
-            <ProjectsPage />
-            <BlogPage />
-            <Footer />
-        </main>
-    );
+	return (
+		<main>
+			<Header />
+			<Heading1>About</Heading1>
+		</main>
+	);
 }
 
 export default App;
