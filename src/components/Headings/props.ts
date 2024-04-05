@@ -2,4 +2,4 @@ export interface headingProps {
 	children: string;
 }
 
-export const baseClassName = 'min-w-[320px] ';
+export const baseClassName = 'p-4 min-w-80 ';
