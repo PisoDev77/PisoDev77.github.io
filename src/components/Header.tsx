@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 
+import darkModeImg from '../../public/images/darkmode.svg';
+import lightModeImg from '../../public/images/lightmode.svg';
+
 export default function Header() {
 	const [isDarkmode, setIsDarkmode] = useState(false);
 
@@ -24,7 +27,7 @@ export default function Header() {
 	return (
 		<header className='p-4'>
 			<button onClick={handleDarkmode}>
-				<img className='sm:h-6' src={`/public/images/${isDarkmode ? 'darkmode' : 'lightmode'}.svg`} alt='' />
+				<img className='sm:h-6' src={isDarkmode ? darkModeImg : lightModeImg} alt='' />
 			</button>
 		</header>
 	);
