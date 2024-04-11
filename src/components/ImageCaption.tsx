@@ -1,5 +1,10 @@
 import Heading3 from './Headings/Heading3';
 
+import communicationImg from '../../public/images/communication.svg';
+import readabilityImg from '../../public/images/readability.svg';
+import intutionImg from '../../public/images/intuition.svg';
+import userFriendlyImg from '../../public/images/user-friendly.svg';
+
 interface imageCaptionProps {
 	name: string;
 }
@@ -19,22 +24,22 @@ export default function ImageCaption(props: imageCaptionProps) {
 
 	const imageInfos: imageInfoProps = {
 		communication: {
-			src: '/public/images/communication.svg',
+			src: communicationImg,
 			alt: 'Communication image',
 			description: 'communication description',
 		},
 		readability: {
-			src: '/public/images/readability.svg',
+			src: readabilityImg,
 			alt: 'Readability image',
 			description: 'readability description',
 		},
 		intuition: {
-			src: '/public/images/intuition.svg',
+			src: intutionImg,
 			alt: 'intuition image',
 			description: 'intuition description',
 		},
 		'user-friendly': {
-			src: '/public/images/user-friendly.svg',
+			src: userFriendlyImg,
 			alt: 'user-friendly image',
 			description: 'user-friendly description',
 		},
