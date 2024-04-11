@@ -16,6 +16,7 @@ export default {
 		screens: {
 			sm: '480px',
 			md: '768px',
+			lg: '1280px',
 		},
 		fontFamily: {
 			ibm: ['IBM', 'sans-serif'],

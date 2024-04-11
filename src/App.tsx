@@ -6,7 +6,7 @@ function App() {
 	return (
 		<main>
 			<Header />
-			<section className='grid grid-cols-1 sm:grid-cols-2'>
+			<section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
 				<Heading1>About</Heading1>
 				<ImageCaption name='communication' />
 				<ImageCaption name='readability' />
