@@ -10,8 +10,6 @@ export default {
 			lightBg: '#F0F0F0',
 			darkFont: '#E0E0E0',
 			darkBg: '#121212',
-			bgTest1: 'red',
-			bgTest2: 'blue',
 		},
 		screens: {
 			sm: '480px',

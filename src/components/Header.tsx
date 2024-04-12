@@ -1,9 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Dispatch, SetStateAction } from 'react';
 
 import darkModeImg from '../../public/images/darkmode.svg';
 import lightModeImg from '../../public/images/lightmode.svg';
+import { MenuOpenIcon, MenuCloseIcon } from '../components/Svg';
 
-export default function Header() {
+type HeaderProps = {
+	isMenuOpen: boolean;
+	setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
+};
+
+export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
 	const [isDarkmode, setIsDarkmode] = useState(false);
 
 	useEffect(() => {
@@ -25,9 +31,12 @@ export default function Header() {
 	};
 
 	return (
-		<header className='p-4'>
+		<header className='p-4 grid grid-cols-2 md:grid-cols-1'>
 			<button onClick={handleDarkmode}>
 				<img className='sm:h-6' src={isDarkmode ? darkModeImg : lightModeImg} alt='' />
+			</button>
+			<button className='justify-self-end md:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+				{isMenuOpen ? MenuOpenIcon : MenuCloseIcon}
 			</button>
 		</header>
 	);
