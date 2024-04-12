@@ -1,7 +1,7 @@
 import { headingProps, baseClassName } from './props';
 
-export default function Heading1(headingProps: headingProps) {
+export default function Heading2(headingProps: headingProps) {
 	const { children } = headingProps;
 
-	return <h2 className={baseClassName + 'text-2xl sm:text-4xl md:text-6xl'}>{children}</h2>;
+	return <h2 className={baseClassName + 'text-xl sm:text-3xl md:text-5xl'}>{children}</h2>;
 }

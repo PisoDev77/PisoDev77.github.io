@@ -50,10 +50,10 @@ export default function ImageCaption(props: imageCaptionProps) {
 	const { src, alt, description } = selectedImageInfo;
 
 	return (
-		<div className='flex flex-col justify-center items-center p-4 min-w-80'>
+		<section className='flex flex-col justify-center items-center p-4 min-w-80'>
 			<Heading3>{name}</Heading3>
 			<img className='w-6/12' src={src} alt={alt} />
 			<p className='text-center'>{description}</p>
-		</div>
+		</section>
 	);
 }
