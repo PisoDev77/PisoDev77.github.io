@@ -1,3 +1,5 @@
+import { Dispatch, ReactElement, SetStateAction } from 'react';
+
 import Heading3 from './Headings/Heading3';
 
 import communicationImg from '../../public/images/communication.svg';
@@ -7,6 +9,7 @@ import userFriendlyImg from '../../public/images/user-friendly.svg';
 
 interface imageCaptionProps {
 	name: string;
+	openModalWithContent: (element: ReactElement) => void;
 }
 
 type imageData = {
@@ -20,7 +23,7 @@ type imageInfoProps = {
 };
 
 export default function ImageCaption(props: imageCaptionProps) {
-	const { name } = props;
+	const { name, openModalWithContent } = props;
 
 	const imageInfos: imageInfoProps = {
 		communication: {
@@ -50,7 +53,10 @@ export default function ImageCaption(props: imageCaptionProps) {
 	const { src, alt, description } = selectedImageInfo;
 
 	return (
-		<section className='flex flex-col justify-center items-center p-4 min-w-80'>
+		<section
+			className='flex flex-col justify-center items-center p-4 min-w-80'
+			onClick={() => openModalWithContent(<h1>HELLO FROM OUTSIED</h1>)}
+		>
 			<Heading3>{name}</Heading3>
 			<img className='w-6/12' src={src} alt={alt} />
 			<p className='text-center'>{description}</p>
