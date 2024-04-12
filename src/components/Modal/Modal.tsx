@@ -11,7 +11,7 @@ export default function Modal({ currentModalContent, setIsModalOpen }: ModalProp
 	return (
 		<div className='fixed  h-screen w-screen z-50 p-4  backdrop-blur-sm'>
 			<section className='relative w-full bg-lightBg dark:bg-darkBg z-50'>
-				<button className='absolute top-0 right-0 p-4' onClick={() => setIsModalOpen(false)}>
+				<button className='h-1 absolute top-0 right-0 p-4' onClick={() => setIsModalOpen(false)}>
 					{ModalCloseIcon}
 				</button>
 				{currentModalContent}

@@ -6,6 +6,7 @@ import ImageCaption from './components/ImageCaption';
 import Menus from './components/Menus';
 import ExperienceSection from './components/ExperienceSection';
 import Modal from './components/Modal/Modal';
+import Test from './Test';
 
 function App() {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
@@ -18,8 +19,9 @@ function App() {
 	};
 
 	return (
-		<main className=''>
-			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
+		<main className='bg-gradient-to-b dark:from-darkBg dark:to-darkFont"'>
+			<Test />
+			{/* {isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
 
 			<Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 			<Menus isMenuOpen={isMenuOpen} />
@@ -41,7 +43,7 @@ function App() {
 			<article>
 				<Heading1>Blog</Heading1>
 			</article>
-			<footer>Contact</footer>
+			<footer>Contact</footer> */}
 		</main>
 	);
 }

@@ -1,4 +1,4 @@
-import { Dispatch, ReactElement, SetStateAction } from 'react';
+import { ReactElement } from 'react';
 
 import Heading3 from './Headings/Heading3';
 
@@ -6,6 +6,7 @@ import communicationImg from '../../public/images/communication.svg';
 import readabilityImg from '../../public/images/readability.svg';
 import intutionImg from '../../public/images/intuition.svg';
 import userFriendlyImg from '../../public/images/user-friendly.svg';
+import AboutModalContent from './Modal/AboutModalContent';
 
 interface imageCaptionProps {
 	name: string;
@@ -55,7 +56,7 @@ export default function ImageCaption(props: imageCaptionProps) {
 	return (
 		<section
 			className='flex flex-col justify-center items-center p-4 min-w-80'
-			onClick={() => openModalWithContent(<h1>HELLO FROM OUTSIED</h1>)}
+			onClick={() => openModalWithContent(<AboutModalContent title={name} contents={['a', 'b', 'c']} />)}
 		>
 			<Heading3>{name}</Heading3>
 			<img className='w-6/12' src={src} alt={alt} />
