@@ -6,7 +6,9 @@ import ImageCaption from './components/ImageCaption';
 import Menus from './components/Menus';
 import ExperienceSection from './components/ExperienceSection';
 import Modal from './components/Modal/Modal';
-import Test from './Test';
+
+import { experiences } from './mock/experience';
+// import Test from './Test';
 
 function App() {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
@@ -20,9 +22,8 @@ function App() {
 
 	return (
 		<main className='bg-gradient-to-b dark:from-darkBg dark:to-darkFont"'>
-			<Test />
-			{/* {isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
-
+			{/* <Test /> */}
+			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
 			<Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 			<Menus isMenuOpen={isMenuOpen} />
 			<article className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
@@ -34,8 +35,9 @@ function App() {
 			</article>
 			<article>
 				<Heading1>Experience</Heading1>
-				<ExperienceSection title='Solvook' />
-				<ExperienceSection title='Visang' />
+				{experiences.map((experience) => (
+					<ExperienceSection experiences={experience} openModalWithContent={openModalWithContent} />
+				))}
 			</article>
 			<article>
 				<Heading1>Projects</Heading1>
@@ -43,7 +45,7 @@ function App() {
 			<article>
 				<Heading1>Blog</Heading1>
 			</article>
-			<footer>Contact</footer> */}
+			<footer>Contact</footer>
 		</main>
 	);
 }
