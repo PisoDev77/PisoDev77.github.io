@@ -8,7 +8,6 @@ import ExperienceSection from './components/ExperienceSection';
 import Modal from './components/Modal/Modal';
 
 import { experiences } from './mock/experience';
-// import Test from './Test';
 
 function App() {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
@@ -22,7 +21,6 @@ function App() {
 
 	return (
 		<main className='bg-gradient-to-b dark:from-darkBg dark:to-darkFont"'>
-			{/* <Test /> */}
 			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
 			<Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 			<Menus isMenuOpen={isMenuOpen} />
@@ -33,7 +31,7 @@ function App() {
 				<ImageCaption name='user-friendly' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='intuition' openModalWithContent={openModalWithContent} />
 			</article>
-			<article>
+			<article className='px-8 py-2'>
 				<Heading1>Experience</Heading1>
 				{experiences.map((experience) => (
 					<ExperienceSection experiences={experience} openModalWithContent={openModalWithContent} />

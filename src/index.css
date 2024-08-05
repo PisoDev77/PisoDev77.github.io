@@ -10,7 +10,7 @@
 
 @layer base {
 	body {
-		@apply dark:bg-darkBg dark:text-darkFont bg-lightBg text-lightFont;
+		@apply dark:bg-darkBg dark:text-darkFont bg-lightBg text-lightFont text-lg;
 	}
 	section {
 		@apply p-4;
