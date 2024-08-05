@@ -5,7 +5,7 @@ import { SolvookSvg, VisangSvg } from '../Svg';
 
 import { experienceType } from '../../mock/experience';
 import Heading3 from '../Headings/Heading3';
-import AboutModalContent from '../Modal/AboutModalContent';
+import ExpericeneModal from '../Modal/ExpericeneModal';
 
 interface experienceSeciontProps {
 	experiences: experienceType;
@@ -35,7 +35,7 @@ export default function ExperienceSection({ experiences, openModalWithContent }:
 					<li key={`modal_${idx}`}>{detail}</li>
 				))}
 			</ul>
-			<button onClick={() => openModalWithContent(<AboutModalContent {...experiences} />)}>자세히 보기</button>
+			<button onClick={() => openModalWithContent(<ExpericeneModal {...experiences} />)}>자세히 보기</button>
 		</section>
 	);
 }
