@@ -6,15 +6,13 @@ export default {
 	darkMode: 'class',
 	theme: {
 		colors: {
-			lightFont: '#000000',
-			lightBg: '#F0F0F0',
-			darkFont: '#E0E0E0',
-			darkBg: '#121212',
+			lightFont: '#213547',
+			lightBg: '#fbfff4',
+			darkFont: '#f8f7f4',
+			darkBg: '#352f36',
 			spaceFrom: '#F0F0F0',
 			spaceVia: '#00FFFF',
 			spaceTo: '#EEEEE',
-			test1: 'red',
-			test2: 'blue',
 		},
 		screens: {
 			sm: '480px',
