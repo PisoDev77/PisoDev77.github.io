@@ -4,10 +4,12 @@ import Header from './components/Header';
 import Heading1 from './components/Headings/Heading1';
 import ImageCaption from './components/ImageCaption';
 import Menus from './components/Menus';
-import ExperienceSection from './components/ExperienceSection';
+import ExperienceSection from './components/Sections/ExperienceSection';
+import ProjectSection from './components/Sections/ProjectSection';
 import Modal from './components/Modal/Modal';
 
 import { experiences } from './mock/experience';
+import { projects } from './mock/project';
 
 function App() {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
@@ -20,7 +22,7 @@ function App() {
 	};
 
 	return (
-		<main className='bg-gradient-to-b dark:from-darkBg dark:to-darkFont"'>
+		<main className='bg-gradient-to-b dark:from-darkBg dark:to-darkFont'>
 			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
 			<Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 			<Menus isMenuOpen={isMenuOpen} />
@@ -37,8 +39,11 @@ function App() {
 					<ExperienceSection experiences={experience} openModalWithContent={openModalWithContent} />
 				))}
 			</article>
-			<article>
+			<article className='px-8 py-2'>
 				<Heading1>Projects</Heading1>
+				{projects.map((project) => (
+					<ProjectSection {...project}></ProjectSection>
+				))}
 			</article>
 			<article>
 				<Heading1>Blog</Heading1>
