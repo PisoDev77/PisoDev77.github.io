@@ -27,8 +27,8 @@ export const experiences: experienceType[] = [
 	},
 	{
 		title: 'Solvook',
-		startDate: new Date('2023-04-01'),
-		endDate: new Date('2024-03-31'),
+		startDate: new Date('2022-12-12'),
+		endDate: new Date('2022-12-23'),
 		isWorking: false,
 		task: '디지털 웹 콘텐츠 편집',
 		role: '프리랜서',

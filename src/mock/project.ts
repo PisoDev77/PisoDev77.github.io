@@ -4,6 +4,7 @@ export type projectType = {
 	endDate: Date;
 	details: string[];
 	github: string;
+	page: string;
 };
 
 export const projects: projectType[] = [
@@ -19,7 +20,8 @@ export const projects: projectType[] = [
 			'React, JavaScript(ES6+)를 사용하여 SPA 형태로 개발',
 			'기존 수작업 대비 2배 이상 생산성 향상된 것으로 추정',
 		],
-		github: 'https://pisodev77.github.io/solvook-utils/',
+		github: 'https://github.com/PisoDev77/solvook-utils',
+		page: 'https://pisodev77.github.io/solvook-utils/',
 	},
 	{
 		title: '팀 프로젝트 - 👀자리어때 ',
@@ -34,6 +36,7 @@ export const projects: projectType[] = [
 			'Git-flow 전략으로 체계적인 브랜치 전략 운영',
 		],
 		github: 'https://github.com/seatchoice',
+		page: 'https://seatchoice-brzg5m0ep-seat-choice.vercel.app/',
 	},
 	{
 		title: '팀 프로젝트 - DUI ',
@@ -47,5 +50,6 @@ export const projects: projectType[] = [
 			'Vercel을 이용한 클라이언트/서버 배포 자동화',
 		],
 		github: 'https://github.com/piso-deepdive-project/DUI',
+		page: 'https://dui-dui.vercel.app/',
 	},
 ];
