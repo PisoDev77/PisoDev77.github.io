@@ -9,7 +9,6 @@ export default function ExperienceCompany({ title, contents }: ExperienceCompany
 	return (
 		<ul>
 			<Heading3>{title}</Heading3>
-			{/* svg */}
 			{contents.map((content) => (
 				<li>{content}</li>
 			))}
