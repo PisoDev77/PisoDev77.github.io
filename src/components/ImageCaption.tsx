@@ -56,7 +56,7 @@ export default function ImageCaption(props: imageCaptionProps) {
 	return (
 		<section
 			className='flex flex-col justify-center items-center p-4 min-w-80'
-			onClick={() => openModalWithContent(<AboutModalContent title={name} contents={['a', 'b', 'c']} />)}
+			onClick={() => openModalWithContent(<AboutModalContent title={name} details={['a', 'b', 'c']} />)}
 		>
 			<Heading3>{name}</Heading3>
 			<img className='w-6/12' src={src} alt={alt} />
