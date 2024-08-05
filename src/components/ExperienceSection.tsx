@@ -34,9 +34,13 @@ export default function ExperienceSection({ experiences, openModalWithContent }:
 			<p>
 				{task}: ({role})
 			</p>
-			<button onClick={() => openModalWithContent(<AboutModalContent title={title} details={details} />)}>
-				자세히 보기
-			</button>
+			<ul className='flex flex-col gap-2 list-disc px-16'>
+				{/* svg */}
+				{details.map((detail, idx) => (
+					<li key={`modal_${idx}`}>{detail}</li>
+				))}
+			</ul>
+			<button onClick={() => openModalWithContent(<AboutModalContent {...experiences} />)}>자세히 보기</button>
 		</section>
 	);
 }
