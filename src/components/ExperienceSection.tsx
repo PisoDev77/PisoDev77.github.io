@@ -19,7 +19,7 @@ const svg: {
 };
 
 export default function ExperienceSection({ experiences, openModalWithContent }: experienceSeciontProps) {
-	const { title, startDate, endDate, isWorking, task, role } = experiences;
+	const { title, startDate, endDate, isWorking, task, role, details } = experiences;
 
 	return (
 		<section>
@@ -34,9 +34,7 @@ export default function ExperienceSection({ experiences, openModalWithContent }:
 			<p>
 				{task}: ({role})
 			</p>
-			<button
-				onClick={() => openModalWithContent(<AboutModalContent title={title} contents={['a', 'b', 'c']} />)}
-			>
+			<button onClick={() => openModalWithContent(<AboutModalContent title={title} details={details} />)}>
 				자세히 보기
 			</button>
 		</section>
