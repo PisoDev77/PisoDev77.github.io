@@ -6,10 +6,12 @@ import ImageCaption from './components/ImageCaption';
 import Menus from './components/Menus';
 import ExperienceSection from './components/Sections/ExperienceSection';
 import ProjectSection from './components/Sections/ProjectSection';
+import BlogSection from './components/Sections/BlogSection';
 import Modal from './components/Modal/Modal';
 
 import { experiences } from './mock/experience';
 import { projects } from './mock/project';
+import { blogs } from './mock/blogs.ts';
 
 function App() {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
@@ -46,12 +48,15 @@ function App() {
 			<article className='px-8 py-2'>
 				<Heading1 isBox={true}>Projects</Heading1>
 				{projects.map((project, idx) => (
-					<ProjectSection key={'project' + idx} {...project}></ProjectSection>
+					<ProjectSection key={'project' + idx} {...project} />
 				))}
+			</article>
+			<article className='px-8 py-2'>
+				<Heading1 isBox={true}>Blog</Heading1>
+				<BlogSection blogs={blogs} openModalWithContent={openModalWithContent} />
 			</article>
 			<footer className='flex flex-col p-6 border-4'>
 				<b>Contact</b>
-				{/* <input type='email' disabled value='pisodev0427@gmail.com' /> */}
 				<a href='mailto:pisodev0427@gmail.com'>pisodev0427@gmail.com</a>
 			</footer>
 		</main>
