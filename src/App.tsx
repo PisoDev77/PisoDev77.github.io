@@ -26,15 +26,15 @@ function App() {
 			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
 			<Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 			<Menus isMenuOpen={isMenuOpen} />
-			<article className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-				<Heading1>About</Heading1>
+			<article className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-8 py-2'>
+				<Heading1 isBox={true}>About</Heading1>
 				<ImageCaption name='communication' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='readability' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='user-friendly' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='intuition' openModalWithContent={openModalWithContent} />
 			</article>
 			<article className='px-8 py-2'>
-				<Heading1>Experience</Heading1>
+				<Heading1 isBox={true}>Experience</Heading1>
 				{experiences.map((experience, idx) => (
 					<ExperienceSection
 						key={'experience' + idx}
@@ -44,12 +44,12 @@ function App() {
 				))}
 			</article>
 			<article className='px-8 py-2'>
-				<Heading1>Projects</Heading1>
+				<Heading1 isBox={true}>Projects</Heading1>
 				{projects.map((project, idx) => (
 					<ProjectSection key={'project' + idx} {...project}></ProjectSection>
 				))}
 			</article>
-			<footer className='flex flex-col p-6'>
+			<footer className='flex flex-col p-6 border-4'>
 				<b>Contact</b>
 				{/* <input type='email' disabled value='pisodev0427@gmail.com' /> */}
 				<a href='mailto:pisodev0427@gmail.com'>pisodev0427@gmail.com</a>
