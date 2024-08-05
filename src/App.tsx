@@ -45,10 +45,11 @@ function App() {
 					<ProjectSection {...project}></ProjectSection>
 				))}
 			</article>
-			<article>
-				<Heading1>Blog</Heading1>
-			</article>
-			<footer>Contact</footer>
+			<footer className='flex flex-col p-6'>
+				<b>Contact</b>
+				{/* <input type='email' disabled value='pisodev0427@gmail.com' /> */}
+				<a href='mailto:pisodev0427@gmail.com'>pisodev0427@gmail.com</a>
+			</footer>
 		</main>
 	);
 }
