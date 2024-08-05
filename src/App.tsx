@@ -22,7 +22,7 @@ function App() {
 	};
 
 	return (
-		<main className='bg-gradient-to-b dark:from-darkBg dark:to-darkFont'>
+		<main>
 			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
 			<Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 			<Menus isMenuOpen={isMenuOpen} />
@@ -35,14 +35,18 @@ function App() {
 			</article>
 			<article className='px-8 py-2'>
 				<Heading1>Experience</Heading1>
-				{experiences.map((experience) => (
-					<ExperienceSection experiences={experience} openModalWithContent={openModalWithContent} />
+				{experiences.map((experience, idx) => (
+					<ExperienceSection
+						key={'experience' + idx}
+						experiences={experience}
+						openModalWithContent={openModalWithContent}
+					/>
 				))}
 			</article>
 			<article className='px-8 py-2'>
 				<Heading1>Projects</Heading1>
-				{projects.map((project) => (
-					<ProjectSection {...project}></ProjectSection>
+				{projects.map((project, idx) => (
+					<ProjectSection key={'project' + idx} {...project}></ProjectSection>
 				))}
 			</article>
 			<footer className='flex flex-col p-6'>
