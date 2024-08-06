@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 
+import darkModeImg from '../../../public/images/darkmode.svg';
+import lightModeImg from '../../../public/images/lightmode.svg';
+
 export default function DarkMode() {
 	const [theme, setTheme] = useState('');
 	useEffect(() => {
@@ -27,7 +30,7 @@ export default function DarkMode() {
 				}
 			}}
 		>
-			{theme}
+			<img className='sm:h-6' src={theme === 'dark' ? darkModeImg : lightModeImg} alt='' />
 		</button>
 	);
 }

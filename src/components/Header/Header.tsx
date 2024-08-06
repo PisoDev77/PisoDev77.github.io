@@ -1,4 +1,4 @@
-import { useEffect, useState, Dispatch, SetStateAction } from 'react';
+import { useEffect, useState } from 'react';
 
 import { MenuOpenIcon, MenuCloseIcon } from '../../components/Svg';
 import Menus from './Menus';
@@ -29,7 +29,7 @@ export default function Header() {
 
 	return (
 		<header
-			className={`p-4 shadow-neumorphismLight dark:shadow-neumorphismDark flex ${
+			className={`sticky top-0 dark:bg-darkBg  bg-lightBg p-4 shadow-neumorphismLight dark:shadow-neumorphismDark flex gap-4 ${
 				isMenuOpen ? 'justify-between' : 'justify-end'
 			}`}
 		>
