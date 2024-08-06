@@ -1,10 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, RefObject } from 'react';
 
 import { MenuOpenIcon, MenuCloseIcon } from '../../components/Svg';
 import Menus from './Menus';
 import DarkMode from './DarkMode';
 
-export default function Header() {
+type refsTypes = {
+	attitudeRef: RefObject<HTMLInputElement>;
+	experienceRef: RefObject<HTMLInputElement>;
+	projectRef: RefObject<HTMLInputElement>;
+	blogRef: RefObject<HTMLInputElement>;
+};
+
+export default function Header(props: refsTypes) {
 	const [isMobile, setIsMobile] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -33,7 +40,7 @@ export default function Header() {
 				isMenuOpen ? 'justify-between' : 'justify-end'
 			}`}
 		>
-			{isMenuOpen ? <Menus /> : ''}
+			{isMenuOpen ? <Menus {...props} /> : ''}
 			{isMobile ? (
 				<button className={'justify-self-end'} onClick={() => setIsMenuOpen(!isMenuOpen)}>
 					{isMenuOpen ? MenuCloseIcon : MenuOpenIcon}
