@@ -1,9 +1,12 @@
 export type blogType = {
 	title: string;
 	content: any;
+	tags: string[];
 };
 
+import MVP from '/docs/blog/mvp.md';
+
 export const blogs: blogType[] = [
-	{ title: 'mvp', content: 'mvp content' },
-	{ title: 'two', content: 'two content' },
+	{ title: 'mvp1', content: MVP, tags: ['dev'] },
+	{ title: 'mvp2', content: MVP, tags: ['dev'] },
 ];

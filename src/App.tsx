@@ -13,6 +13,8 @@ import { experiences } from './mock/experience';
 import { projects } from './mock/project';
 import { blogs } from './mock/blogs.ts';
 
+import { formatDate } from 'piso-lib';
+
 function App() {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
