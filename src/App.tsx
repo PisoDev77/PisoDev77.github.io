@@ -1,9 +1,8 @@
 import { ReactElement, useState } from 'react';
 
-import Header from './components/Header';
+import Header from './components/Header/Header.tsx';
 import Heading1 from './components/Headings/Heading1';
 import ImageCaption from './components/ImageCaption';
-import Menus from './components/Menus';
 import ExperienceSection from './components/Sections/ExperienceSection';
 import ProjectSection from './components/Sections/ProjectSection';
 import BlogSection from './components/Sections/BlogSection';
@@ -13,10 +12,7 @@ import { experiences } from './mock/experience';
 import { projects } from './mock/project';
 import { blogs } from './mock/blogs.ts';
 
-import { formatDate } from 'piso-lib';
-
 function App() {
-	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 	const [currentModalContent, setCurrentModalContent] = useState<ReactElement>(<h1>Error</h1>);
 
@@ -28,10 +24,9 @@ function App() {
 	return (
 		<main>
 			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
-			<Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-			<Menus isMenuOpen={isMenuOpen} />
+			<Header />
 			<article className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-8 py-2'>
-				<Heading1 isBox={true}>About</Heading1>
+				<Heading1 isBox={true}>Attitude</Heading1>
 				<ImageCaption name='communication' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='readability' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='user-friendly' openModalWithContent={openModalWithContent} />

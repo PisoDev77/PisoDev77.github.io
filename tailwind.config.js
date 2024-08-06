@@ -22,6 +22,10 @@ export default {
 		fontFamily: {
 			ibm: ['IBM', 'sans-serif'],
 		},
+		boxShadow: {
+			neumorphismLight: '8px 8px 16px #d9e2ce, -8px -8px 16px #ffffff',
+			neumorphismDark: '8px 8px 16px #2b272d, -8px -8px 16px #3f3945',
+		},
 		extend: {},
 	},
 
