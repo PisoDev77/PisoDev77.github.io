@@ -6,7 +6,7 @@ import communicationImg from '../../public/images/communication.svg';
 import readabilityImg from '../../public/images/readability.svg';
 import intutionImg from '../../public/images/intuition.svg';
 import userFriendlyImg from '../../public/images/user-friendly.svg';
-import AboutModalContent from './Modal/AboutModalContent';
+import AttitudeModalContent from './Modal/AttitudeModalContent';
 
 interface imageCaptionProps {
 	name: string;
@@ -63,7 +63,7 @@ export default function ImageCaption(props: imageCaptionProps) {
 	return (
 		<section
 			className='flex flex-col justify-center items-center p-4 min-w-80'
-			onClick={() => openModalWithContent(<AboutModalContent title={name} details={details} />)}
+			onClick={() => openModalWithContent(<AttitudeModalContent title={name} details={details} />)}
 		>
 			<Heading3>{name}</Heading3>
 			<img className='w-6/12' src={src} alt={alt} />

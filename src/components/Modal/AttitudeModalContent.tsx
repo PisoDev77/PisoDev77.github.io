@@ -1,6 +1,6 @@
 import Heading3 from '../Headings/Heading3';
 
-export default function AboutModalContent({ title, details }: { title: string; details: string[] }) {
+export default function AttitudeModalContent({ title, details }: { title: string; details: string[] }) {
 	return (
 		<ul className='flex flex-col gap-2 list-disc'>
 			<Heading3>{title}</Heading3>
