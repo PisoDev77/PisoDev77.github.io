@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { ReactElement, useState, useRef } from 'react';
 
 import Header from './components/Header/Header.tsx';
 import Heading1 from './components/Headings/Heading1';
@@ -21,18 +21,24 @@ function App() {
 		setCurrentModalContent(element);
 	};
 
+	const attitudeRef = useRef(null);
+	const experienceRef = useRef(null);
+	const projectRef = useRef(null);
+	const blogRef = useRef(null);
+	const refs = { attitudeRef, experienceRef, projectRef, blogRef };
+
 	return (
 		<main>
 			{isModalOpen ? <Modal currentModalContent={currentModalContent} setIsModalOpen={setIsModalOpen} /> : ''}
-			<Header />
-			<article className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-8 py-2'>
+			<Header {...refs} />
+			<article className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-8 py-2' ref={attitudeRef}>
 				<Heading1 isBox={true}>Attitude</Heading1>
 				<ImageCaption name='communication' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='readability' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='user-friendly' openModalWithContent={openModalWithContent} />
 				<ImageCaption name='intuition' openModalWithContent={openModalWithContent} />
 			</article>
-			<article className='px-8 py-2'>
+			<article className='px-8 py-2' ref={experienceRef}>
 				<Heading1 isBox={true}>Experience</Heading1>
 				{experiences.map((experience, idx) => (
 					<ExperienceSection
@@ -42,13 +48,13 @@ function App() {
 					/>
 				))}
 			</article>
-			<article className='px-8 py-2'>
+			<article className='px-8 py-2' ref={projectRef}>
 				<Heading1 isBox={true}>Projects</Heading1>
 				{projects.map((project, idx) => (
 					<ProjectSection key={'project' + idx} {...project} />
 				))}
 			</article>
-			<article className='px-8 py-2'>
+			<article className='px-8 py-2' ref={blogRef}>
 				<Heading1 isBox={true}>Blog</Heading1>
 				<BlogSection blogs={blogs} openModalWithContent={openModalWithContent} />
 			</article>
