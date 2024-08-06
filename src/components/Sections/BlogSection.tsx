@@ -17,8 +17,8 @@ export default function BlogSection({ blogs, openModalWithContent }: blogSeciont
 					key={'blog' + idx}
 					onClick={() => openModalWithContent(<BlogModal {...blog} />)}
 				>
-					{blog.tags.map((tag) => (
-						<span className='text-xs border-2 px-1 rounded-lg' role='tag'>
+					{blog.tags.map((tag, idx) => (
+						<span key={'blog-' + idx} className='text-xs border-2 px-1 rounded-lg' role='tag'>
 							{tag}
 						</span>
 					))}
