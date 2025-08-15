@@ -16,27 +16,26 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20 and Yarn 1 (Classic)
+      - name: Setup Node.js 20 (npm)
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
-          cache-dependency-path: frontend/yarn.lock
-      - name: Activate Yarn Classic via Corepack
-        run: |
-          corepack enable
-          corepack prepare yarn@1.22.22 --activate
-          yarn --version
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
 
-      - name: Install dependencies (frontend)
+      - name: Install dependencies (frontend) with npm
         working-directory: frontend
         run: |
-          yarn install --frozen-lockfile
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Build (frontend)
         working-directory: frontend
         run: |
-          yarn build
+          npm run build
 
       - name: Deploy to external Pages repo
         uses: peaceiris/actions-gh-pages@v3
@@ -45,6 +44,6 @@ jobs:
           external_repository: PisoDev77/PisoDev77.github.io
           publish_branch: main
           publish_dir: frontend/build
-          commit_message: 'Deploy: ${{ github.repository }}@${{ github.sha }}'
+          commit_message: 'Deploy: ${{ github.repository }}@${{ github.sha }} (npm)'
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
