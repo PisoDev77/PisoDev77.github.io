@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages (external repo)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20 and enable Corepack (Yarn)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: |
+          corepack enable
+          corepack prepare yarn@stable --activate
+
+      - name: Install dependencies (frontend)
+        working-directory: frontend
+        run: |
+          yarn install --frozen-lockfile || yarn install
+
+      - name: Build (frontend)
+        working-directory: frontend
+        run: |
+          yarn build
+
+      - name: Deploy to external Pages repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PAGES_TOKEN }}
+          external_repository: PisoDev77/PisoDev77.github.io
+          publish_branch: main
+          publish_dir: frontend/build
+          # If your external repo has branch protection on main, disable or use a different branch
+          # force_orphan: true  # uncomment to reset history each deploy
+          commit_message: "Deploy: ${{ github.repository }}@${{ github.sha }}"
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
