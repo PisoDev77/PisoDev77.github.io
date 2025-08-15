@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiExternalLink, FiGithub, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiX } from 'react-icons/fi';
 
 const Projects = ({ data }) => {
 	const { ref, inView } = useInView({

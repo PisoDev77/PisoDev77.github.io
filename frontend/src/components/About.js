@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiUser, FiCode, FiStar, FiHeart } from 'react-icons/fi';
+import { FiUser, FiCode, FiStar } from 'react-icons/fi';
 
 const About = ({ data }) => {
 	const { ref, inView } = useInView({
