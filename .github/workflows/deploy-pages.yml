@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages (external repo)
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch: {}
 
 concurrency:
@@ -16,18 +16,22 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20 and enable Corepack (Yarn)
+      - name: Setup Node.js 20 and Yarn 1 (Classic)
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: |
+          cache: 'yarn'
+          cache-dependency-path: frontend/yarn.lock
+      - name: Activate Yarn Classic via Corepack
+        run: |
           corepack enable
-          corepack prepare yarn@stable --activate
+          corepack prepare yarn@1.22.22 --activate
+          yarn --version
 
       - name: Install dependencies (frontend)
         working-directory: frontend
         run: |
-          yarn install --frozen-lockfile || yarn install
+          yarn install --frozen-lockfile
 
       - name: Build (frontend)
         working-directory: frontend
@@ -41,8 +45,6 @@ jobs:
           external_repository: PisoDev77/PisoDev77.github.io
           publish_branch: main
           publish_dir: frontend/build
-          # If your external repo has branch protection on main, disable or use a different branch
-          # force_orphan: true  # uncomment to reset history each deploy
-          commit_message: "Deploy: ${{ github.repository }}@${{ github.sha }}"
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: 'Deploy: ${{ github.repository }}@${{ github.sha }}'
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
